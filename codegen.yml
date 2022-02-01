@@ -1,0 +1,10 @@
+schema: ./src/**/*.graphql
+generates:
+  ./src/generated.gql.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      typesPrefix: G
+      enumsAsTypes: true
+      strictScalars: true

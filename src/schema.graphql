@@ -1,0 +1,14 @@
+type Moderation {
+    id: ID!
+}
+
+type ModerationState {
+    pending: [Moderation!]!
+    history: [Moderation!]!
+}
+
+type User {
+    id: ID!
+    name: String!
+    moderation: ModerationState!
+}
